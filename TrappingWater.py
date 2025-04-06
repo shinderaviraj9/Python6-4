@@ -12,9 +12,11 @@ right=rindex-1
 while left<=right:
     if lval<=rval :
        water_hold[left]=max(0,lval-height[left])
+       lval= max(lval,height[left])
        left=left+1
     else:
        water_hold[right]=max(0,rval-height[right])
+       rval = max(rval, height[right])
        right=right-1
 
 print(water_hold)
